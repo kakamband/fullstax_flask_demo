@@ -8,8 +8,15 @@
 
 {% block scripts %}
 
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{% if start %}
+    <script> 
+        var JSstart = "{{ start }}"
+        var JSclose = " {{ closes }}" 
+    </script>
+{% endif %}
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="//d3js.org/d3.v4.min.js"></script>
 <script src="{{ url_for('static', filename='js/price_graph.js') }}"></script>
 
 {% endblock %}
