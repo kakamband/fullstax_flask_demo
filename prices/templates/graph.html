@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id='pricePlot'></div>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<script src="{{ url_for('static', filename='js/price_graph.js') }}"></script>
+
+{% endblock %}
